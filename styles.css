@@ -15,27 +15,31 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #f7f7f7;
+    background-color: #1f1f1f;
 }
 
 h1 {
     font-size: 28px;
-    color: #333;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
 p {
-    color: #666;
+    color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
 /* name title */
 .nametitle {
-    color: #666;
+    color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
-
+/* top bar */
+.topbar {
+    display: flex;
+    background-color: rgb(58, 58, 58);
+}
 
 /* container */
 .container {
@@ -44,12 +48,11 @@ p {
 
 .left-sidebar {
     width: 25%;
-    background-color: #46a7ce;
+    background-color: #4d4d4d;
 }
 
 .right-sidebar {
     width: 75%;
-    background-color: #9a68f7;
 }
 
 .sidebar-button {
