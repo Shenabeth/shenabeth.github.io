@@ -15,7 +15,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #1f1f1f;
+    background-color: #1e1e1e;
 }
 
 h1 {
@@ -38,7 +38,7 @@ p {
 /* top bar */
 .topbar {
     display: flex;
-    background-color: rgb(58, 58, 58);
+    background-color: #3c3c3c;
 }
 
 /* container */
@@ -46,13 +46,18 @@ p {
     display: flex;
 }
 
+.far-left-sidebar {
+    width: 15%;
+    background-color: #333333;
+}
+
 .left-sidebar {
     width: 25%;
-    background-color: #4d4d4d;
+    background-color: #252526;
 }
 
 .right-sidebar {
-    width: 75%;
+    width: 60%;
 }
 
 .sidebar-button {
