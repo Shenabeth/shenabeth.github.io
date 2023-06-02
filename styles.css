@@ -39,6 +39,8 @@ p {
 .topbar {
     display: flex;
     background-color: #3c3c3c;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* container */
