@@ -24,7 +24,6 @@ h1 {
     font-size: 28px;
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
-
 }
 
 p {
@@ -114,16 +113,38 @@ header {
     padding-top: 1vh;
 }
 
+.sidebarLeft {
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
+    text-align: left;
+    position: absolute;
+}
+
+.sidebarRight {
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+    z-index: 1;
+    position: absolute;
+    width: 28vh;
+    right: 2vh;
+    /*line-height: 1.25;*/
+} 
+
 .right-sidebar {
     width: 65vh;
     height: 100%;
     position: fixed;
     top: 4.5vh;
     left: 35vh;
-    padding-top: 1vh;
-    padding-left: 5vh;
-    padding-right: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 5vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 50vh;
 }
 
 /* collapsable menu */
@@ -145,13 +166,14 @@ header {
     display: none;
     font-family: Consolas;
     font-size: 16px;
-    padding: 8px;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     width: 100%;
     font-size: 15px;
     color: white;
-    
+    line-height: 2;
 }
-
 
 .menuImg {
     max-width: 40%;
