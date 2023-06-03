@@ -12,21 +12,25 @@ li {
 
 /* Default styles */
 body {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-family: Lato;
+    /* font-weight: lighter; */
+    font-size: 16px;
     line-height: 1.5;
     background-color: #1e1e1e;
 }
 
 h1 {
+    font-family: Montserrat;
     font-size: 28px;
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
+
 }
 
 p {
+    font-family: Consolas;
     color: rgb(255, 255, 255);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 header {
@@ -40,11 +44,13 @@ header {
 /* name title */
 .nametitle {
     color: rgb(255, 255, 255);
-    margin-bottom: 10px;
+    margin-bottom: 5vh;
 }
 
 /* top bar */
 .topbar {
+    font-family: Lato;
+    font-weight: normal;
     background-color: #3c3c3c;
     width: 100%;
     max-width: 100%;
@@ -68,7 +74,7 @@ header {
 }
 
 .topbarRight {
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -82,21 +88,7 @@ header {
 /* container */
 .container {
     display: flex;
-}
-
-.menuImg {
-    max-width: 60%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 3vh;
-    transform: translate(-50%, -50%);
-    opacity: 70%;
-}
-
-.menuImg:hover {
-    cursor: pointer;
+    font-family: Consolas;
 }
 
 .far-left-sidebar {
@@ -111,6 +103,7 @@ header {
 }
 
 .left-sidebar {
+    font-weight: normal;
     width: 28vh;
     height: 100vh;
     position: fixed;
@@ -135,13 +128,13 @@ header {
 
 /* collapsable menu */
 .collapsible {
+    font-family: Consolas;
+    font-size: 16px;
     cursor: pointer;
     background-color: #1e1e1e00;
     padding: 8px 12px;
     border: none;
     width: 100%;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
     color: white;
     justify-content: left;
     align-items: left;
@@ -150,10 +143,34 @@ header {
 
 .content {
     display: none;
+    font-family: Consolas;
+    font-size: 16px;
     padding: 8px;
     width: 100%;
-
-    font-family: Arial, sans-serif;
     font-size: 15px;
     color: white;
+    
+}
+
+
+.menuImg {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 3vh;
+    transform: translate(-50%, -50%);
+    opacity: 70%;
+}
+
+.menuImg:hover {
+    cursor: pointer;
+}
+
+.iconImg {
+    width: 1em;
+    height: auto;
+    max-width: 1em;
+    max-height: 1em;
 }
