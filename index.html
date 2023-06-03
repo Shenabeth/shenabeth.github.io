@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
     <title>Shenabeth</title>
 </head>
 
@@ -13,7 +14,7 @@
 <body>
     <header>
         <div class="topbar">
-            <p style="color:#6e6e6e; font-size: 13px; margin: 5px;">
+            <div class="topbarLeft">
                 File&nbsp;&nbsp;&nbsp;&nbsp;
                 Edit&nbsp;&nbsp;&nbsp;&nbsp;
                 Selection&nbsp;&nbsp;&nbsp;&nbsp;
@@ -22,34 +23,64 @@
                 Run&nbsp;&nbsp;&nbsp;&nbsp;
                 Terminal&nbsp;&nbsp;&nbsp;&nbsp;
                 Help&nbsp;&nbsp;&nbsp;&nbsp;
-            </p>
-            <p style="color: white; font-size: 15px; margin: 5px; align-self: center;">
+            </div>
+
+            <div class="topbarRight">
                 Shenabeth Jenkins &nbsp;–&nbsp; Developer Portfolio (Workspace)
-            </p>
+            </div>
         </div>
     </header>
 
-    <div class="nametitle">
-        <p style="color: rgb(255, 255, 255); font-size: 21px;">Hello, my name is<br></p>
-        <p style="color: rgb(255, 255, 255); font-size: 28px;">Shenabeth Jenkins<br></p>
-        <p style="color: rgb(255, 255, 255); font-size: 16px;">SHEN • A • BETH   JEN • KINS</p>
-    </div>
+    
 
     <div class="container">
-        <aside class="far-left-sidebar">
-            <p>ico</p>
-        </aside>
+        
+        <div class="far-left-sidebar">
+            ico
+        </div>
 
         <aside class="left-sidebar">
-            <button class="sidebar-button">About Me</button><br>
-            <button class="sidebar-button">Portfolio</button><br>
-            <button class="sidebar-button">Skills and Technologies</button><br>
-            <button class="sidebar-button">Resume and Awards</button><br>
-            <button class="sidebar-button">Contact</button>
+            
+            <button class="collapsible">About Me</button>
+            <div class="content">
+                &nbsp;&nbsp;&nbsp;&nbsp;text
+            </div>
+
+            <br>
+            <button class="collapsible">Portfolio</button>
+            <div class="content">
+                &nbsp;&nbsp;&nbsp;&nbsp;text
+            </div>
+
+            <br>
+            <button class="collapsible">Skills</button>
+            <div class="content">
+                &nbsp;&nbsp;&nbsp;&nbsp;Technologies
+            </div>
+
+            <br>
+            <button class="collapsible">Resume</button>
+            <div class="content">
+                &nbsp;&nbsp;&nbsp;&nbsp;Download
+            </div>
+
+            <br>
+            <button class="collapsible">Contact</button>
+            <div class="content">
+                &nbsp;&nbsp;&nbsp;&nbsp;text
+            </div>
+        
         </aside>
 
+
+
+
         <main class="right-sidebar">
-            <!-- Add content for the right sidebar here -->
+            <div class="nametitle">
+                <p style="color: rgb(255, 255, 255); font-size: 21px;">Hello, my name is<br></p>
+                <p style="color: rgb(255, 255, 255); font-size: 28px;">Shenabeth Jenkins<br></p>
+                <p style="color: rgb(255, 255, 255); font-size: 16px;">SHEN • A • BETH   JEN • KINS</p>
+            </div>
         </main>
     </div>
 </body>
