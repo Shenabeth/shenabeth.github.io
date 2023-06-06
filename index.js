@@ -20,6 +20,7 @@ collapsibleBtns.forEach(function (button) {
 const menuBtn = document.querySelector('.menu-btn');
 const menuSidebar = document.querySelector('.menu-sidebar');
 const rightSidebar = document.querySelector('.right-sidebar');
+const progressBar = document.querySelector('.progress-bar-container');
 
 menuBtn.addEventListener('click', function () {
   menuSidebar.classList.toggle('open');
@@ -28,11 +29,27 @@ menuBtn.addEventListener('click', function () {
     menuSidebar.style.width = '13vw';
     rightSidebar.style.width = '81vw';
     rightSidebar.style.left = '19vw';
+    progressBar.style.width = '81vw';
     menuSidebar.classList.remove('hide-contents');
   } else {
     menuSidebar.style.width = '0vw';
     rightSidebar.style.width = '96vw';
     rightSidebar.style.left = '4vw';
+    progressBar.style.width = '96vw';
     menuSidebar.classList.add('hide-contents');
   }
+});
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  const progressBar = document.querySelector(".progress-bar");
+
+  rightSidebar.addEventListener("scroll", function () {
+    const scrollTop = rightSidebar.scrollTop;
+    const scrollHeight = rightSidebar.scrollHeight;
+    const clientHeight = rightSidebar.clientHeight;
+
+    const scrolledPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    progressBar.style.width = scrolledPercent + "%";
+  });
 });

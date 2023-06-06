@@ -26,6 +26,12 @@ h1 {
     margin-bottom: 1.5em;
 }
 
+h2,
+h3 {
+    color: white;
+    font-family: Montserrat;
+}
+
 p {
     color: white;
     font-family: Consolas;
@@ -69,9 +75,9 @@ header {
 .topbarRight {
     align-items: center;
     justify-content: center;
-    text-align: center;
     left: 50%;
     position: absolute;
+    text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -110,33 +116,29 @@ header {
 .right-sidebar {
     box-sizing: border-box;
     height: 100vh;
-    padding: 3em;
+    left: 4vw;
+    overflow-y: scroll;
+    /* padding: 5em; */
+    padding-bottom: 10em;
+    padding-top: 3em;
     position: fixed;
     top: 4.5vh;
-    width: 96vw;
-    left: 4vw;
     transition: all 0.3s ease;
+    width: 96vw;
 }
 
 .right-sidebar.collapsed {
-    width: 81vw;
     left: 50vw;
+    width: 81vw;
 }
 
 .folders {
     color: white;
     font-weight: 200;
     font-size: 0.8em;
-    text-align: left;
     margin: 1vw;
     position: absolute;
-    /* width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 4.5vh;
-    left: 4vw; */
-    /* padding: 5vh;
-    padding-top: 2vh; */
+    text-align: left;
 }
 
 
@@ -189,6 +191,18 @@ header {
 }
 
 
+/* images */
+.iconImg {
+    height: auto;
+    max-height: 1em;
+    max-width: 1em;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    transform: translateY(10%);
+    width: 1em;
+}
+
+
 /* misc */
 .bar-left {
     color: white;
@@ -212,17 +226,29 @@ header {
     z-index: 1;
 }
 
+.progress-bar-container {
+    /* position: absolute; */
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+    /* bottom: 0;
 
-/* images */
-.iconImg {
-    height: auto;
-    max-height: 1em;
-    max-width: 1em;
-    margin-left: 0.6em;
-    margin-right: 0.6em;
-    transform: translateY(10%);
-    width: 1em;
+    left: 4vw; */
+    overflow-y: scroll;
+    
+    position: fixed;
+    top: 4.5vh;
+    transition: all 0.3s ease;
+    /* width: 96vw; */
 }
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    width: 0;
+    transition: width 0.3s;
+}
+
 
 
 /* name title */
