@@ -215,16 +215,14 @@ header {
 
 /* images */
 .iconImg {
-    width: 1em;
     height: auto;
-    max-width: 1em;
     max-height: 1em;
+    max-width: 1em;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    transform: translateY(10%);
+    width: 1em;
 }
-
-
-
-
-
 
 
 /* name title */
@@ -232,50 +230,3 @@ header {
     color: white;
     margin-bottom: 5vh;
 } */
-
-
-/* collapsable menu */
-/*.collapsible-menu {
-    font-family: Consolas;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #1e1e1e00;
-    padding: 8px 12px;
-    padding-left: 2em;
-    border: none;
-    width: 100%;
-    color: white;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-}
-
-.collapsible {
-    font-family: Consolas;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #1e1e1e00;
-    padding: 8px 12px;
-    padding-left: 2em;
-    border: none;
-    width: 100%;
-    color: white;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-}
-
-.content {
-    display: none;
-    font-family: Consolas;
-    font-size: 16px;
-    padding-left: 2.7em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    width: 100%;
-    font-size: 15px;
-    color: white;
-    line-height: 2;
-}
-
- */
