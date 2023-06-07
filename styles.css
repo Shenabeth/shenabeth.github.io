@@ -105,7 +105,6 @@ header {
     height: 100vh;
     left: 4vw;
     overflow: hidden;
-    padding: 0;
     position: fixed;
     top: 4.5vh;
     transition: all 0.3s ease;
@@ -118,9 +117,8 @@ header {
     height: 100vh;
     left: 4vw;
     overflow-y: scroll;
-    /* padding: 5em; */
-    padding-bottom: 10em;
-    padding-top: 3em;
+    /* padding-bottom: 10em;
+    padding-top: 3em; */
     position: fixed;
     top: 4.5vh;
     transition: all 0.3s ease;
@@ -136,9 +134,13 @@ header {
     color: white;
     font-weight: 200;
     font-size: 0.8em;
-    margin: 1vw;
+    /* margin: 1vw; */
     position: absolute;
     text-align: left;
+}
+
+.body-container {
+    padding: 5em;
 }
 
 
@@ -190,6 +192,11 @@ header {
     width: 100%;
 }
 
+.screen {
+    height: 96vh;
+    /* top: 4.5vh; */
+}
+
 
 /* images */
 .iconImg {
@@ -222,7 +229,7 @@ header {
     margin: 1vw;
     position: absolute;
     text-align: right;
-    width: 11vw;
+    width: 13vw;
     z-index: 1;
 }
 
@@ -230,16 +237,11 @@ header {
     /* position: absolute; */
     width: 100%;
     height: 5px;
-    background-color: #ccc;
-    /* bottom: 0;
-
-    left: 4vw; */
+    background-color: rgba(204, 204, 204, 0);
     overflow-y: scroll;
-    
     position: fixed;
     top: 4.5vh;
     transition: all 0.3s ease;
-    /* width: 96vw; */
 }
 
 .progress-bar {
@@ -250,9 +252,8 @@ header {
 }
 
 
-
 /* name title */
-/* .nametitle {
+.nametitle {
     color: white;
-    margin-bottom: 5vh;
-} */
+    font-family: Montserrat;
+}
