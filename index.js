@@ -68,51 +68,52 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 
-const screens = document.querySelectorAll('.screen');
+// const screens = document.querySelectorAll('.screen');
 
-let currentScreenIndex = 0;
-let isScrolling = false; // Flag to prevent multiple scroll events
+// let currentScreenIndex = 0;
+// let isScrolling = false; // Flag to prevent multiple scroll events
 
-rightSidebar.addEventListener('wheel', (event) => {
-  event.preventDefault();
+// rightSidebar.addEventListener('wheel', (event) => {
+//   event.preventDefault();
 
-  if (!isScrolling) {
-    // Check if the scroll direction is down
-    if (event.deltaY > 0) {
-      scrollToNextScreen();
-    } else {
-      scrollToPreviousScreen();
-    }
-  }
-});
+//   if (!isScrolling) {
+//     // Check if the scroll direction is down
+//     if (event.deltaY > 0) {
+//       scrollToNextScreen();
+//     } else {
+//       scrollToPreviousScreen();
+//     }
+//   }
+// });
 
-function scrollToNextScreen() {
-  const isAtBottom = rightSidebar.scrollHeight - rightSidebar.scrollTop === rightSidebar.clientHeight;
-  if (currentScreenIndex < screens.length - 1 && !isAtBottom) {
-    isScrolling = true;
-    currentScreenIndex++;
-    const nextScreen = screens[currentScreenIndex];
-    const scrollTop = rightSidebar.scrollTop + nextScreen.getBoundingClientRect().top;
-    rightSidebar.scrollTo({ top: scrollTop, behavior: 'smooth' });
+// function scrollToNextScreen() {
+//   const isAtBottom = rightSidebar.scrollHeight - rightSidebar.scrollTop === rightSidebar.clientHeight;
+//   if (currentScreenIndex < screens.length - 1 && !isAtBottom) {
+//     isScrolling = true;
+//     currentScreenIndex++;
+//     const nextScreen = screens[currentScreenIndex];
+//     const scrollTop = rightSidebar.scrollTop + nextScreen.getBoundingClientRect().top;
+//     rightSidebar.scrollTo({ top: scrollTop, behavior: 'smooth' });
 
-    // Reset isScrolling flag after scroll animation completes
-    setTimeout(() => {
-      isScrolling = false;
-    }, 800); // Adjust the duration as needed
-  }
-}
+//     // Reset isScrolling flag after scroll animation completes
+//     setTimeout(() => {
+//       isScrolling = false;
+//     }, 800); // Adjust the duration as needed
+//   }
+// }
 
-function scrollToPreviousScreen() {
-  if (currentScreenIndex > 0) {
-    isScrolling = true;
-    currentScreenIndex--;
-    const previousScreen = screens[currentScreenIndex];
-    const scrollTop = rightSidebar.scrollTop + previousScreen.getBoundingClientRect().top;
-    rightSidebar.scrollTo({ top: scrollTop, behavior: 'smooth' });
+// function scrollToPreviousScreen() {
+//   if (currentScreenIndex > 0) {
+//     isScrolling = true;
+//     currentScreenIndex--;
+//     const previousScreen = screens[currentScreenIndex];
+//     const scrollTop = rightSidebar.scrollTop + previousScreen.getBoundingClientRect().top;
+//     rightSidebar.scrollTo({ top: scrollTop, behavior: 'smooth' });
 
-    // Reset isScrolling flag after scroll animation completes
-    setTimeout(() => {
-      isScrolling = false;
-    }, 800); // Adjust the duration as needed
-  }
-}
+//     // Reset isScrolling flag after scroll animation completes
+//     setTimeout(() => {
+//       isScrolling = false;
+//     }, 800); // Adjust the duration as needed
+//   }
+// }
+
