@@ -126,11 +126,14 @@ header {
     width: 81vw;
 }
 
+.right-sidebar-body {
+    margin: 5em;
+}
+
 .folders {
     color: white;
     font-weight: 200;
     font-size: 0.8em;
-    /* margin: 1vw; */
     position: absolute;
     text-align: left;
 }
@@ -228,7 +231,6 @@ header {
 }
 
 .progress-bar-container {
-    /* position: absolute; */
     width: 100%;
     height: 5px;
     background-color: rgba(204, 204, 204, 0);
@@ -249,6 +251,39 @@ header {
 .nametitle {
     color: white;
     font-family: Montserrat;
+}
+
+
+/* decorations */
+.decorative-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 30vh;
+    position: relative;
+    width: 50vw;
+}
+
+.title-bar {
+    align-items: center;
+    background-color: #2933ec;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+}
+
+.bar-btn {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #000;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    width: 20px;
 }
 
 
