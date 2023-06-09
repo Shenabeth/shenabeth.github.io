@@ -126,9 +126,9 @@ header {
     width: 81vw;
 }
 
-.right-sidebar-body {
+/* .right-sidebar-body {
     margin: 5em;
-}
+} */
 
 .folders {
     color: white;
@@ -251,26 +251,31 @@ header {
 .nametitle {
     color: white;
     font-family: Montserrat;
+    padding: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
 /* decorations */
 .decorative-container {
-    background-color: #fff;
+    /* background-color: #D3D3D3; */
+    background-color: rgba(211, 211, 211, 0.5);
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 30vh;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    height: 40vh;
     position: relative;
     width: 50vw;
 }
 
 .title-bar {
     align-items: center;
-    background-color: #2933ec;
+    background: linear-gradient(to right, #6B2177, #A687A8);
     border-bottom: 1px solid #ccc;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: white;
     display: flex;
     height: 40px;
     justify-content: flex-end;
@@ -278,11 +283,15 @@ header {
 
 .bar-btn {
     align-items: center;
-    background-color: transparent;
-    border: 1px solid #000;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #3E006E;
     display: flex;
     height: 20px;
     justify-content: center;
+    margin-right: 0.5em;
     width: 20px;
 }
 
