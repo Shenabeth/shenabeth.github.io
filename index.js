@@ -58,4 +58,3 @@ window.addEventListener("DOMContentLoaded", function () {
     progressBar.style.width = scrolledPercent + "%";
   });
 });
-
