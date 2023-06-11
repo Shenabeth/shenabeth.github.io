@@ -46,10 +46,13 @@ header {
     width: 100%;
 }
 
+
+
 /* top bar */
 .topbar {
     align-items: center;
     background-color: #3c3c3c;
+    /* background: linear-gradient(45deg, #8b5cd6, #0048ff, #ff0061); */
     color: white;
     display: flex;
     font-family: Lato;
@@ -59,6 +62,12 @@ header {
     max-width: 100%;
     position: relative;
     width: 100%;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	/* background: linear-gradient(-45deg, #6c3c6c, #663366, #552255, #000033); */
+    background: linear-gradient(-45deg, #410f48, #380c52, #290c55, #140d2b, #23093a, #320e3f, #2d1457, #141432, #120e1c, #2e0c32);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
 .topbarLeft {
@@ -87,7 +96,12 @@ header {
 }
 
 .left-sidebar {
-    background-color: #333333;
+    /* background-color: #333333; */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #1e1e1e;
+    /* background: linear-gradient(-45deg, #410f48, #380c52, #290c55, #140d2b, #23093a, #320e3f, #2d1457, #141432, #120e1c, #2e0c32); */
+    /* background: linear-gradient(45deg, #8b5cd6, #0048ff, #ff0061);
+    animation: gradientAnimation 10s infinite; */
     font-weight: 100;
     height: 100vh;
     position: fixed;
@@ -96,7 +110,10 @@ header {
 }
 
 .menu-sidebar {
-    background-color: #252526;
+    /* background-color: #252526; */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #1e1e1e;
+    /* background: linear-gradient(-45deg, #410f48, #380c52, #290c55, #140d2b, #23093a, #320e3f, #2d1457, #141432, #120e1c, #2e0c32); */
     display: block;
     height: 100vh;
     left: 4vw;
@@ -108,13 +125,26 @@ header {
     z-index: 1;
 }
 
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 .right-sidebar {
     box-sizing: border-box;
     height: 100vh;
     left: 4vw;
     overflow-y: scroll;
     padding-bottom: 10em;
-    padding-top: 3em;
     position: fixed;
     top: 4.5vh;
     transition: all 0.3s ease;
@@ -126,9 +156,9 @@ header {
     width: 81vw;
 }
 
-/* .right-sidebar-body {
-    margin: 5em;
-} */
+.right-sidebar-body {
+    padding: 5em;
+}
 
 .folders {
     color: white;
@@ -136,6 +166,10 @@ header {
     font-size: 0.8em;
     position: absolute;
     text-align: left;
+}
+.folders p {
+    padding-top: 1.5em;
+    transform: translateX(10%);
 }
 
 .body-container {
@@ -191,10 +225,14 @@ header {
     width: 100%;
 }
 
-.screen {
-    height: 96vh;
-    /* top: 4.5vh; */
+.arrow {
+    font-size: 0.7em;
+    left: 2em;
+    position: absolute;
+    transform: translateY(30%);
+    color: white;
 }
+
 
 /* images */
 .iconImg {
@@ -206,6 +244,7 @@ header {
     transform: translateY(10%);
     width: 1em;
 }
+
 
 /* misc */
 .bar-left {
@@ -255,20 +294,46 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.nametitle h1 {
+    font-size: 3em;
+    padding: 0;
+}
+.nametitle h2 {
+    font-size: 1.5em;
+    padding: 0;
+}
+.nametitle h3 {
+    font-size: 0.8em;
+    padding: 0;
+    transform: translateY(-7vh);
+}
+
 
 /* decorations */
-.decorative-container {
-    /* background-color: #D3D3D3; */
+.spacer {
+    height: 10vw;
+}
+
+.container-wrapper1 {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    position: relative;
+}
+
+.decorative-container1 {
     background-color: rgba(211, 211, 211, 0.5);
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    height: 40vh;
+    height: 35vh;
     position: relative;
-    width: 47vw;
+    margin-right: 10em;
+    transform: translateX(2vw);
+    width: 35vw;
 }
 
-.title-bar {
+.title-bar1 {
     align-items: center;
     background: linear-gradient(to right, #6B2177, #A687A8);
     border-bottom: 1px solid #ccc;
@@ -295,9 +360,102 @@ header {
     width: 1.2rem;
 }
 
-.container-wrapper {
-    display: flex;
+
+.decorative-container2 {
+    background-color: rgba(211, 211, 211, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    height: 35vh;
+    position: relative;
+    transform: translateX(-3vw);
+    width: 20vw;
+    z-index: 1;
 }
+
+.title-bar2 {
+    align-items: center;
+    background: linear-gradient(to right, #6B2177, #A687A8);
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    height: 2.2rem;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+
+.container-wrapper2 {
+    display: flex;
+    justify-content: left;
+    justify-self: left;
+    position: relative;
+    padding-left: 5vw;
+}
+
+.decorative-container3 {
+    background-color: rgba(211, 211, 211, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    height: 35vh;
+    position: relative;
+    margin-right: 10em;
+    width: 50vw;
+}
+
+.title-bar3 {
+    align-items: center;
+    background: linear-gradient(to right, #290c55, #410f48);
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    height: 2.2rem;
+    justify-content: flex-end;
+}
+
+.decorative-container4 {
+    justify-content: center;
+    background-color: #797979;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    height: 14vh;
+    position: absolute;
+    transform: translate(25%, -80%);
+    width: 16vw;
+    z-index: 1;
+}
+
+.decorative-container4 p {
+    color: white;
+    font-size: 1.5em;
+    font-family: Montserrat;
+    padding: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10%);
+}
+
+.title-bar4 {
+    align-items: center;
+    background: linear-gradient(to right, #410f48, #290c55);
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    height: 2.2rem;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
 
 
 /* stars */
