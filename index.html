@@ -9,339 +9,108 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Consolas" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="index.js" defer></script>
     <title>Shenabeth Jenkins</title>
-
-    <style>
-        ::-webkit-scrollbar {
-            width: 0.5rem;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
 
 </head>
 
 
 <body>
 
-    <div id="stars1"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-
     <header>
-        <div class="topbar">
-            <div class="topbarLeft">
-                File&nbsp;&nbsp;&nbsp;&nbsp;
-                Edit&nbsp;&nbsp;&nbsp;&nbsp;
-                Selection&nbsp;&nbsp;&nbsp;&nbsp;
-                View&nbsp;&nbsp;&nbsp;&nbsp;
-                Go&nbsp;&nbsp;&nbsp;&nbsp;
-                Run&nbsp;&nbsp;&nbsp;&nbsp;
-                Terminal&nbsp;&nbsp;&nbsp;&nbsp;
-                Help&nbsp;&nbsp;&nbsp;&nbsp;
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Download CV</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-
-            <div class="topbarRight">
-                Shenabeth Jenkins &nbsp;–&nbsp; Developer Portfolio (Workspace)
-            </div>
-        </div>
+        </nav>
     </header>
 
-
+    <!-- <main class="container">
+        
+    </main> -->
 
     <div class="container">
+        <div class="left-container">
+            <h2>Hello, my name is</h2>
+            <h1>Shenabeth Jenkins</h1>
+            <p>I'm a computer scientist specializing in full stack development and software engineering.
+                With expertise in building web applications and designing software solutions,
+                I'm passionate about pushing the boundaries of technology.
+                Explore my projects and achievements to see how I can contribute to your next endeavor.
+                Let's connect and collaborate!</p>
+            <button>About Me</button>
+        </div>
+        <div class="right-container">
+            <img src="image.jpg" alt="Image">
+        </div>
+    </div>
 
-        <aside class="left-sidebar">
-            <button class="menu-btn">
-                <img src="images/menu.png" alt="Menu" class="menuImg" draggable="false">
-            </button>
-        </aside>
+    <div class="container">
+        <div class="center-container">
+            <h1>Skills</h1>
+            <p>All of the skills will go here.</p>
+            <button>See More</button>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="center-container">
+            <h1>Projects</h1>
+            <p>project containers will go here</p>
+            <p>Interested in seeing more?</p> <button>Explore Projects</button>
+        </div>
+    </div>
 
-        <div class="menu-sidebar" id="menu-sidebar">
+    <div class="container">
+        <div class="center-container">
+            <h1>Contact Me</h1>
+            <p>contact information will go here</p>
+            <button>Download CV</button>
+        </div>
+    </div>
 
-            <div class="bar-left">EXPLORER</div>
-            <div class="bar-right">...</div><br>
+    <!-- <div class="container">
+        <h2>Second Container</h2>
+        <div class="button-container">
+            <button>Button 1</button>
+            <button>Button 2</button>
+        </div>
+        <button class="center-button">Center Button</button>
+    </div>
 
-            <div class="folders">
-                <p> PORTFOLIO (WORKSPACE)</p>
-
-                <button class="collapsible">
-                    <i class="arrow fas fa-chevron-down"></i>
-                    <img src="images/folder.png" alt="Folder" class="iconImg" draggable="false">About Me
-                </button>
-                <div class="content">
-                    <img src="images/file.png" alt="File" class="iconImg" draggable="false">Education
-                    <br><img src="images/file.png" alt="File" class="iconImg" draggable="false">Hobbies
-                    <br><img src="images/image.png" alt="File" class="iconImg" draggable="false">Gallery
-                </div><br>
-
-                <button class="collapsible">
-                    <i class="arrow fas fa-chevron-down"></i>
-                    <img src="images/folder.png" alt="Folder" class="iconImg" draggable="false">Portfolio
-                </button>
-                <div class="content">
-                    <img src="images/file.png" alt="File" class="iconImg" draggable="false">Ongoing Projects
-                    <br><img src="images/file.png" alt="File" class="iconImg" draggable="false">Past Projects
-                </div><br>
-
-                <button class="collapsible">
-                    <i class="arrow fas fa-chevron-down"></i>
-                    <img src="images/folder.png" alt="Folder" class="iconImg" draggable="false">Skills
-                </button>
-                <div class="content">
-                    <img src="images/file.png" alt="File" class="iconImg" draggable="false">Languages
-                    <br><img src="images/file.png" alt="File" class="iconImg" draggable="false">Tools
-                    <br><img src="images/file.png" alt="File" class="iconImg" draggable="false">Platforms
-                </div><br>
-
-                <button class="collapsible">
-                    <i class="arrow fas fa-chevron-down"></i>
-                    <img src="images/folder.png" alt="Folder" class="iconImg" draggable="false">Resume
-                </button>
-                <div class="content">
-                    <img src="images/file.png" alt="File" class="iconImg" draggable="false">Download
-                    <br><img src="images/image.png" alt="File" class="iconImg" draggable="false">Awards
-                </div><br>
-
-                <button class="collapsible">
-                    <img src="images/contact.png" alt="Folder" class="iconImg" draggable="false">Contact
-                </button>
-
+    <div class="container">
+        <h2>Third Container</h2>
+        <div class="inner-container">
+            <div class="left-side">
+                <h3>Left Side</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Button</button>
+            </div>
+            <div class="right-side">
+                <img src="image.jpg" alt="Image">
             </div>
         </div>
-
-
-        <main class="right-sidebar">
-
-            <div class="progress-bar-container" style="z-index: 10;">
-                <div class="progress-bar"></div>
-            </div>
-
-
-            <div class="right-sidebar-body">
-                
-                <div class="container-wrapper1">
-                    <div class="decorative-container1">
-                        <div class="title-bar1">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <div class="nametitle">
-                            <h2>Hello, my name is</h2>
-                            <h1>Shenabeth Jenkins</h1>
-                            <h3>SHEN • A • BETH &nbsp; JEN • KINS</h3><br>
-                        </div>
-                    </div>
-    
-                    <div class="decorative-container2">
-                        <div class="title-bar2">
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <!-- add avatar image -->
-    
-                    </div>
-                </div>
-    
-    
-                <div class="spacer"></div>
-    
-    
-                <div class="container-wrapper2">
-                    <div class="decorative-container3">
-                        <div class="title-bar3">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <p>University of Maryland, College Park (Maryland) Jan 2021 - Present</p>
-                        <p>Expected Graduation: December 2023</p>
-                        <p>Montgomery College, Rockville (Maryland) Sept 2018 - Dec 2020</p>
-                        <p>A.A. Computer Science, Fall 2020</p>
-    
-                    </div>
-    
-                    <div class="decorative-container4">
-                        <div class="title-bar4">
-                            <div class="bar-btn">&#8722;</div>
-                        </div>
-                        
-                        <p>EDUCATION</p>
-    
-                    </div>
-                </div>
-    
-
-                <div class="spacer"></div>
-    
-    
-                <div class="container-wrapper2">
-                    <div class="decorative-container3">
-                        <div class="title-bar3">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <p>Languages: C, C++, C#, GML, HTML5 / CSS3, Java, JavaScript, Kotlin, Python</p>
-                        <p>Tools: Android Studio, Asana, Audacity, Docker, Eclipse, Figma, Game Maker Studio, Git, Google
-                            Analytics, Illustrator, Jira, MAGIX Music Maker, Mixcraft 8, PhotoShop, Procreate, ProtoPie, 
-                            SquareSpace, Unity, Visual Studio 2017, Visual Studio Code, Webflow</p>
-                        <p>Platforms: Android, Linux Subsystem, Windows</p>
-    
-                    </div>
-    
-                    <div class="decorative-container4">
-                        <div class="title-bar4">
-                            <div class="bar-btn">&#8722;</div>
-                        </div>
-                        
-                        <p>SKILLS</p>
-    
-                    </div>
-                </div>
-    
-
-                <div class="spacer"></div>
-
-    
-                <div class="container-wrapper2">
-                    <div class="decorative-container3">
-                        <div class="title-bar3">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <p>Memley — Silver Spring, Maryland May 2022 - Present</p>
-                        <p>Game Designer</p>
-                        <ul>
-                            <li>Mobile application development designer for an educational memory app</li>
-                        </ul>
-        
-                        <p>Toucan Family — Silver Spring, Maryland May 2022 - Aug 2022</p>
-                        <p>Data Analyst Intern &amp; Web Designer</p>
-                        <ul>
-                            <li>Created logos, banners, UI designs, branding guides, prototypes, and websites for various
-                                clients
-                            </li>
-                            <li>Worked with Google Analytics and advanced custom filters with regexes to complete freelance
-                                contracts</li>
-                            <li>Oversaw project management to lead a team of computer scientists</li>
-                        </ul>
-        
-                        <p>Kohl’s — Silver Spring, Maryland Sept 2018 - Dec 2020</p>
-                        <p>Seasonal Sales Associate</p>
-                        <ul>
-                            <li>Cross-trained in cashier duties, freight replenishment, backstocking, and Amazon returns</li>
-                            <li>Experienced in fast-paced holiday working and flexible with switching assigned responsibilities
-                            </li>
-                        </ul>
-    
-                    </div>
-    
-                    <div class="decorative-container4">
-                        <div class="title-bar4">
-                            <div class="bar-btn">&#8722;</div>
-                        </div>
-                        
-                        <p>WORK EXPERIENCE</p>
-    
-                    </div>
-                </div>
-
-
-                <div class="spacer"></div>
-    
-    
-                <div class="container-wrapper2">
-                    <div class="decorative-container3">
-                        <div class="title-bar3">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-    
-                        <p>UniPlanner: Mobile productivity gaming app for making organization habits fun for a general audience Dec
-                            2021 - Present</p>
-                        <p>C# Learning Program: Personal project that teaches the basics of C# and how to use it in Visual Studio
-                            Feb 2020 - Present</p>
-    
-                    </div>
-    
-                    <div class="decorative-container4">
-                        <div class="title-bar4">
-                            <div class="bar-btn">&#8722;</div>
-                        </div>
-                        
-                        <p>PROJECTS</p>
-    
-                    </div>
-                </div>
-
-
-                <div class="spacer"></div>
-    
-    
-                <div class="container-wrapper2">
-                    <div class="decorative-container3">
-                        <div class="title-bar3">
-                            <div class="bar-btn">&#8722;</div>
-                            <div class="bar-btn">&#9633;</div>
-                            <div class="bar-btn">&#88;</div>
-                        </div>
-
-                        <p>Google Analytics Certification July 2022</p>
-            
-                        <p>Digital & Traditional Art Capstone Sept 2017 - May 2018</p>
-                        <ul>
-                            <li>Awarded with 3rd place for a portfolio of traditional art mediums and digital art</li>
-                        </ul>
-            
-                        <p>Interactive Media Capstone Sept 2016 - May 2018</p>
-                        <ul>
-                            <li>Showcased a top-down 2D game called “Wild Survival” at Blake High School’s Creator Con 2017</li>
-                        </ul>
-            
-                        <p>Adobe Photoshop Certification April 2017</p>
-    
-                    </div>
-    
-                    <div class="decorative-container4">
-                        <div class="title-bar4">
-                            <div class="bar-btn">&#8722;</div>
-                        </div>
-                        
-                        <p>AWARDS</p>
-    
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- <hr style="border-color: white; margin-top: 50px;"> -->
-
     </div>
 
-    </main>
+    <div class="container">
+        <h2>Fourth Container</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button>Button</button>
+    </div> -->
 
-    </div>
+    <footer>
+        <p>&copy; 2023 Shenabeth Jenkins' Developer Portfolio. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
