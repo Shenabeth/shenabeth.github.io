@@ -1,60 +1,74 @@
 body,
 ul {
+    color: white;
+    background-color: #202124;
+    font-family: "M PLUS Rounded 1c";
     margin: 0;
     padding: 0;
 }
 
-footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: #f2f2f2;
-    text-align: center;
-}
-
-.right-container,
-.left-container {
-    flex: 1;
-    padding: 1rem;
-}
-
-.right-container {
-    text-align: center;
-}
-
-.left-container {
-    text-align: left;
-}
-
-
-
-
-
-
-
-
-
-/* header {
-    background-color: #333333;
+header {
+    background-color: #3c40438a;
+    padding: 0.5em;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
 
+/* header-under {
+    background-color: #3c40438a;
+    filter: blur(5px);
+    padding: 0.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+} */
+
+footer {
+    background-color: #3c4043;
+    color: #ffffff;
+    padding: 0.5em;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #42c38d;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.right-container {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+}
+
+.left-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+}
+
+.center-container {
+    padding: 1em;
+    text-align: center;
+}
+
+/* navigation */
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 0.5em;
 }
 
 nav ul {
@@ -63,32 +77,26 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 10px;
-} */
+    margin-left: 0.5em;
+}
 
-/* nav ul li a {
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px;
+    padding: 0.5em;
 }
 
 nav ul li a:hover {
-    background-color: #666666;
-} */
+    background-color: #3c4043;
+}
 
-/* Add padding to the body to prevent content from being hidden behind the fixed navigation bar */
-/* Adjust this value to match the height of your navigation bar */
-/* body {
-    padding-top: 60px; 
-} */
-
-/* .menu {
+.menu {
     display: flex;
     list-style-type: none;
 }
 
 .menu li {
-    margin-left: 10px;
+    margin-left: 0.5em;
 }
 
 .menu li a {
@@ -99,18 +107,18 @@ nav ul li a:hover {
 .menu-toggle {
     display: none;
     cursor: pointer;
-} */
+}
 
-/* .menu-toggle span {
+.menu-toggle span {
     display: block;
-    width: 20px;
+    width: 1em;
     height: 2px;
     background-color: #ffffff;
     margin-bottom: 4px;
-} */
+}
 
 /* Media query for small screens */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .menu {
         display: none;
     }
@@ -118,63 +126,85 @@ nav ul li a:hover {
     .menu-toggle {
         display: block;
     }
-} */
-
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    text-align: center;
 }
 
 
-.middle-container {
-    text-align: center;
-} */
 
 
-/* .left-container,
-.right-container,
-.inner-container,
-.button-container {
-    flex: 1;
-    padding: 20px;
-}
+/* button */
 
-.left-container {
-    text-align: left;
-}
-
-.right-container,
-.right-side {
-    text-align: right;
-}
-
-.center-button {
-    display: block;
-    margin: 20px auto;
-}
-
-.inner-container::after {
+button {
+    position: relative;
+    background: #202124;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1rem 3rem;
+    background: var(--clr);
+    color: var(--clr);
+    animation: box 3s infinite;
+  }
+  
+  button::before {
     content: "";
-    display: table;
-    clear: both;
-}
-
-.left-side,
-.right-side {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    box-sizing: border-box;
-} */
-
-/* footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-} */
+    position: absolute;
+    inset: 2px;
+    background: #3c4043;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #3c4043;
+    transition: 0.2s;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #3c4043;
+    transition: 0.2s;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+  
+  
