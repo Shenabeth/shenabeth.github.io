@@ -1,48 +1,86 @@
-.navbar {
-    height: 10vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.spacer {
-    margin-top: 15vh;
-}
-
-.website-status p {
-    margin: 0;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50%; /* Center vertically within the container */
-    transform: translateY(-50%); /* Adjust vertical position */
-    color: black; /* Set arrow color to black */
-}
-
-/* nav bar item spacing */
-.navbar-nav .nav-link {
-    margin-right: 20px; /* Adjust the margin to increase spacing */
-}
-
-/* drop down nav bar customization */
-.custom-dropdown {
-    z-index: 1000; /* Set a higher z-index value */
-}
-
-@media (min-width: 992px) { /* Apply the hover effect on desktops (adjust the breakpoint if needed) */
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
-
+/* footer */
 footer {
     background-color: #3c4043;
     color: #ffffff;
     padding: 0.5em;
     text-align: center;
 }
+
+/* nav bar */
+.navbar {
+    height: 10vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+/* nav bar item spacing */
+.navbar-nav .nav-link {
+    margin-right: 20px;
+}
+
+/* nav bar dropdown */
+.custom-dropdown {
+    z-index: 1000;
+}
+
+/* nav bar desktop hovering effect */
+@media (min-width: 992px) { /* adjust breakpoint if needed */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* content container spacer */
+.spacer {
+    margin-top: 15vh;
+}
+
+/* update or delete website status */
+.website-status p {
+    margin: 0;
+}
+
+/* gallery controls */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* center vertically within container */
+    transform: translateY(-50%); /* adjust vertical position */
+    color: black; /* set arrow color to black */
+}
+
+/* button */
+.custom-button {
+    background-color: #33ae87;
+    border: none;
+    color: white;
+    filter: brightness(100%);
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* button hover */
+.custom-button:hover {
+    background-color: #2a966f;
+}
+
+/* button click */
+.custom-button:active {
+    background-color: #1f724e;
+    outline: none;
+}
+
+.custom-button.clicked {
+    background-color: #2a966f;
+}
+
+/* skill card body */
+.card-body {
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* button */
 /* button {
