@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_bkgd.png" type="image/png">
+    <title>Shenabeth Jenkins</title>
 
     <!-- load bootstrap 5 & css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-
+    
     <!-- load fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Consolas" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-
-    <link rel="icon" href="../images/logo_bkgd.png" type="image/png">
+    
+    <!-- load scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="index.js" defer></script>
-    <title>Shenabeth Jenkins</title>
 </head>
 
 
@@ -33,11 +36,11 @@
             </a>
 
             <!-- Navigation Links (Right Side) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
@@ -46,14 +49,14 @@
                         <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="aboutme.html" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Projects
                         </a>
-                        <div class="dropdown-menu custom-dropdown" aria-labelledby="projectsDropdown">
+                        <div class="dropdown-menu custom-dropdown custom-centered" aria-labelledby="projectsDropdown">
                             <a class="dropdown-item" href="#">UniPlanner</a>
-                            <a class="dropdown-item" href="#">GroupMe Mutual Members</a>
+                            <a class="dropdown-item" href="#">GroupMe Global Mutuals</a>
                         </div>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="aboutme.html">Skills</a>
                     </li>
@@ -156,9 +159,9 @@
         <!-- GroupMe Mutual Members -->
         <div class="row mt-4" style="background-color:#f8f9fa; padding: 1rem">
             <div class="col-md-6">
-                <h3>GroupMe Mutual Members</h3>
+                <h3>GroupMe Global Mutuals</h3>
                 <p>
-                    The GroupMe Mutual Members project is a website built to find mutual members within
+                    The GroupMe Global Mutuals project is a website built to find mutual members within
                     two group chats from your GroupMe account. This project was built using HTML, CSS, 
                     JavaScript, and MongoDB.
                 </p>

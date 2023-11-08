@@ -32,6 +32,24 @@ footer {
     }
 }
 
+/* hamburger menu style */
+@media (max-width: 992px) {
+    .custom-navbar {
+      background-color: #f8f9fa; /* Change this to your desired color */
+      text-align: center;
+    }
+    .custom-navbar .nav-item {
+      float: none;
+      display: inline-block;
+    }
+}
+
+/* nav bar dropdown item */
+.custom-centered {
+    text-align: center;
+}
+
+
 /* content container spacer */
 .spacer {
     margin-top: 15vh;
