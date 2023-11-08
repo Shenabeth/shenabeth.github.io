@@ -6,6 +6,18 @@ footer {
     text-align: center;
 }
 
+.footer-image {
+    height: 5vh;
+    width: 5vh;
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        margin-bottom: 1em;
+    }
+}
+
+
 /* nav bar */
 .navbar {
     height: 10vh;
@@ -26,7 +38,9 @@ footer {
 }
 
 /* nav bar desktop hovering effect */
-@media (min-width: 992px) { /* adjust breakpoint if needed */
+@media (min-width: 992px) {
+
+    /* adjust breakpoint if needed */
     .nav-item.dropdown:hover .dropdown-menu {
         display: block;
     }
@@ -35,12 +49,14 @@ footer {
 /* hamburger menu style */
 @media (max-width: 992px) {
     .custom-navbar {
-      background-color: #f8f9fa; /* Change this to your desired color */
-      text-align: center;
+        background-color: #f8f9fa;
+        /* Change this to your desired color */
+        text-align: center;
     }
+
     .custom-navbar .nav-item {
-      float: none;
-      display: inline-block;
+        float: none;
+        display: inline-block;
     }
 }
 
@@ -62,10 +78,14 @@ footer {
 
 /* pfp container */
 .circular-container {
-    width: 10em; /* Set the desired width in em */
-    height: 10em; /* Set the desired height in em */
-    border-radius: 50%; /* Makes it a circle */
-    margin: 0 auto; /* Center the circular container horizontally */
+    width: 10em;
+    /* Set the desired width in em */
+    height: 10em;
+    /* Set the desired height in em */
+    border-radius: 50%;
+    /* Makes it a circle */
+    margin: 0 auto;
+    /* Center the circular container horizontally */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,9 +95,12 @@ footer {
 /* gallery controls */
 .carousel-control-prev,
 .carousel-control-next {
-    top: 50%; /* center vertically within container */
-    transform: translateY(-50%); /* adjust vertical position */
-    color: black; /* set arrow color to black */
+    top: 50%;
+    /* center vertically within container */
+    transform: translateY(-50%);
+    /* adjust vertical position */
+    color: black;
+    /* set arrow color to black */
 }
 
 /* button */
@@ -125,8 +148,8 @@ footer {
     padding: 1rem 3rem;
     transition: 0.2s;
   } */
-  
-  /* button:hover {
+
+/* button:hover {
     letter-spacing: 0.2rem;
     padding: 1rem 3rem;
     background: var(--clr);
@@ -189,8 +212,8 @@ footer {
 
 
 
-  /* old code */
-  /* body,
+/* old code */
+/* body,
 ul {
     color: white;
     background-color: #202124;
