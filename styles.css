@@ -17,7 +17,6 @@ footer {
     }
 }
 
-
 /* nav bar */
 .navbar {
     height: 10vh;
@@ -39,8 +38,7 @@ footer {
 
 /* nav bar desktop hovering effect */
 @media (min-width: 992px) {
-
-    /* adjust breakpoint if needed */
+    /* adjust breakpoint*/
     .nav-item.dropdown:hover .dropdown-menu {
         display: block;
     }
@@ -50,7 +48,6 @@ footer {
 @media (max-width: 992px) {
     .custom-navbar {
         background-color: #f8f9fa;
-        /* Change this to your desired color */
         text-align: center;
     }
 
@@ -65,7 +62,6 @@ footer {
     text-align: center;
 }
 
-
 /* content container spacer */
 .spacer {
     margin-top: 15vh;
@@ -79,11 +75,8 @@ footer {
 /* pfp container */
 .circular-container {
     width: 10em;
-    /* Set the desired width in em */
     height: 10em;
-    /* Set the desired height in em */
     border-radius: 50%;
-    /* Makes it a circle */
     margin: 0 auto;
     /* Center the circular container horizontally */
     display: flex;
@@ -92,16 +85,81 @@ footer {
 }
 
 
-/* gallery controls */
+/* gallery size */
+.carousel-inner {
+    width: 60%;
+    margin: 0 auto;
+    border: 10px solid #33ae87;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* gallery caption */
+.carousel-caption {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #33ae87;
+    padding: 10px;
+    padding-top: 2rem;
+    color: black;
+}
+
+/* gallery navigation controls */
 .carousel-control-prev,
 .carousel-control-next {
     top: 50%;
-    /* center vertically within container */
     transform: translateY(-50%);
-    /* adjust vertical position */
-    color: black;
-    /* set arrow color to black */
+    width: 50px;
+    height: 50px;
+    font-size: 2.1rem;
+    background-color: #33ae87; /* Default button color */
+    border: none;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* vertically center the arrow */
 }
+
+/* Move left button to the right */
+.carousel-control-prev {
+    left: calc(3em + 50px);
+}
+
+/* Move right button to the left */
+.carousel-control-next {
+    right: calc(3em + 50px);
+}
+
+/* Position arrows */
+.carousel-control-prev:before,
+.carousel-control-next:before {
+    content: "\2039"; /* Unicode for left arrow */
+    font-family: "Glyphicons Halflings"; /* Bootstrap's icon font */
+    
+}
+
+.carousel-control-next:before {
+    content: "\203A"; /* Unicode for right arrow */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #2a966f;
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    background-color: #1f724e;
+    outline: none;
+}
+
+.carousel-control-prev.clicked,
+.carousel-control-next.clicked {
+    background-color: #2a966f;
+}
+
 
 /* button */
 .custom-button {
@@ -128,16 +186,12 @@ footer {
     background-color: #2a966f;
 }
 
+
 /* skill card body */
 .card-body {
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-
 
 /* button */
 /* button {
@@ -213,8 +267,6 @@ footer {
     left: 80%;
     animation: move 3s infinite;
   } */
-
-
 
 /* old code */
 /* body,
