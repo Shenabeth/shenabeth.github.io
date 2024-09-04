@@ -22,7 +22,22 @@
 // });
 
 
+// Email address must be valid
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('emailInput');
+    const sendButton = document.querySelector('.primary-button');
 
+    emailInput.addEventListener('input', function() {
+        if (emailInput.checkValidity()) {
+            sendButton.removeAttribute('disabled');
+        } else {
+            sendButton.setAttribute('disabled', 'disabled');
+        }
+    });
+});
+
+
+// Navbar
 (function () {
     // Load Navbar
     const navbarPlaceholder = document.getElementById("navbar-placeholder");
@@ -157,10 +172,12 @@ function is25PercentInViewport(element) {
 
 // Function to add the animation class when the container is 25% in view
 function checkFadeIn() {
-    const container = document.querySelector('.fade-container');
-    if (is25PercentInViewport(container)) {
-        container.classList.add('scrolled-into-view');
-    }
+    const containers = document.querySelectorAll('.fade-container');
+    containers.forEach(container => {
+        if (is25PercentInViewport(container)) {
+            container.classList.add('scrolled-into-view');
+        }
+    });
 }
 
 // Event listener for scrolling
