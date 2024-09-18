@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_bkgd.png" type="image/png">
+    <title>Shenabeth Jenkins</title>
+
+    <!-- load bootstrap & css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- load fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Consolas" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet"> -->
+
+    <!-- load scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="index.js" defer></script>
+</head>
+
+
+<body>
+    <!-- Top Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Full Container -->
+    <div id="container"
+        style="margin: 5vh; position: relative; padding-top: 5vh; padding-bottom: 5vh; opacity: 0; transform: translateY(20px); animation: fadeSlideUp 1.5s ease forwards;">
+        <!-- stars -->
+        <canvas id="starryBackground" style="display: block; position: absolute; top: 0; left: 0;"></canvas>
+        
+        <!-- Title Container -->
+        <div class="container" style="padding-top: 15vh;">
+            <div class="title-container">
+                <h1 style="color: white; font-weight: bold; margin: 0;">
+                    My
+                    <span style="color: #32af87; text-transform: uppercase;">PORTFOLIO</span>
+                </h1>
+                <div class="title-line" style="left: 35%;"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <p>
+        This project focuses on using deep neural networks to predict 3D contact geometry from monocular images of a GelSight tactile sensor. Tactile sensors, inspired by the biological sense of touch, capture intricate 3D geometry during interactions. Our objective was to extend these capabilities by predicting local heightmaps and contact areas from tactile images. By designing and training a neural network, we developed a model that reconstructs 3D geometry based on tactile data. The process involved creating a custom dataset, preprocessing raw tactile sensor data, and constructing a neural network with both coarse and fine prediction layers. The project leveraged supervised learning to generate accurate depth maps and contact predictions, improving the ability of robots to interpret tactile data. This work builds on cutting-edge research like GelSight and DIGIT tactile sensors, advancing tactile-based depth prediction technology in robotics.
+    </p>
+
+
+
+
+
+
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>

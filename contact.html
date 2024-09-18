@@ -27,52 +27,25 @@
 
 <body>
     <!-- Top Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-bar">
-        <div class="container">
-            <!-- Logo and Name (Left Side) -->
-            <a class="navbar-brand" href="index.html">
-                <img src="../images/logo_nobkgd.png" alt="Your Logo" height="30">
-                Shenabeth Jenkins
-            </a>
+    <div id="navbar-placeholder"></div>
 
-            <!-- Navigation Links (Right Side) -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="projectsDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Projects
-                        </a>
-                        <div class="dropdown-menu custom-dropdown custom-centered" aria-labelledby="projectsDropdown">
-                            <a class="dropdown-item" href="#">UniPlanner</a>
-                            <a class="dropdown-item" href="#">GroupMe Global Mutuals</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn custom-button" style="color:white" href="Resume_ShenabethJenkins.pdf"
-                            download>Download Resume</a>
-                    </li>
-                </ul>
+    <!-- Full Container -->
+    <div id="container"
+        style="margin: 5vh; position: relative; padding-top: 5vh; padding-bottom: 5vh; opacity: 0; transform: translateY(20px); animation: fadeSlideUp 1.5s ease forwards;">
+        <!-- stars -->
+        <canvas id="starryBackground" style="display: block; position: absolute; top: 0; left: 0;"></canvas>
+        
+        <!-- Title Container -->
+        <div class="container" style="padding-top: 15vh;">
+            <div class="title-container">
+                <h1 style="color: white; font-weight: bold; margin: 0;">
+                    Contact
+                    <span style="color: #32af87; text-transform: uppercase;">ME</span>
+                </h1>
+                <div class="title-line"></div>
             </div>
         </div>
-    </nav>
+    </div>
 
 
     <!-- Contact -->

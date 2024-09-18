@@ -183,3 +183,97 @@ function checkFadeIn() {
 // Event listener for scrolling
 window.addEventListener('scroll', checkFadeIn);
 window.addEventListener('load', checkFadeIn);
+
+
+
+
+
+
+
+
+
+
+// Music Player
+let audioPlayer = new Audio();
+let playPauseBtn = document.getElementById('playPauseBtn');
+let volumeControlBtn = document.getElementById('volumeBtn');
+let volumeControlSlider = document.querySelector('.volume-control');
+let progressBar = document.getElementById('progressBar');
+let volumeContainer = document.querySelector('.volume-container');
+let currentSongIndex = 0;
+
+const songs = [
+    { src: "../music/song1.mp3", title: "Ring Ring", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
+    { src: "../music/song2.mp3", title: "Space Sandwich", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
+    { src: "../music/song3.mp3", title: "Escape", artist: "Shenabeth", thumbnail: "../images/stock2.png" },
+    { src: "../music/song4.mp3", title: "Digital Bird", artist: "Shenabeth", thumbnail: "../images/stock3.png" },
+    { src: "../music/song5.mp3", title: "Chiptunes", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
+    { src: "../music/song6.mp3", title: "Tech House", artist: "Shenabeth", thumbnail: "../images/stock4.png" }
+];
+
+// Function to load a song based on index
+function loadSong(songIndex) {
+    const song = songs[songIndex];
+    audioPlayer.src = song.src;
+    document.getElementById('activeSongTitle').textContent = song.title;
+    document.getElementById('activeSongArtist').textContent = song.artist;
+    document.querySelector('.music-thumbnail').src = song.thumbnail;
+    progressBar.value = 0;
+}
+
+// Play/Pause functionality
+playPauseBtn.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseBtn.classList.remove('paused');
+    } else {
+        audioPlayer.pause();
+        playPauseBtn.classList.add('paused');
+    }
+});
+
+// Next/Previous buttons
+document.getElementById('nextBtn').addEventListener('click', function() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadSong(currentSongIndex);
+    audioPlayer.play();
+});
+
+document.getElementById('prevBtn').addEventListener('click', function() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadSong(currentSongIndex);
+    audioPlayer.play();
+});
+
+// Progress bar control
+audioPlayer.addEventListener('timeupdate', function() {
+    progressBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    document.getElementById('currentTime').textContent = formatTime(audioPlayer.currentTime);
+    document.getElementById('totalTime').textContent = formatTime(audioPlayer.duration);
+});
+
+progressBar.addEventListener('input', function() {
+    audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration;
+});
+
+// Format time function
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    seconds = Math.floor(seconds % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+// Clickable song items in the song list
+document.querySelectorAll('.music-item').forEach(item => {
+    item.addEventListener('click', function() {
+        currentSongIndex = [...document.querySelectorAll('.music-item')].indexOf(this);
+        loadSong(currentSongIndex);
+        audioPlayer.play();
+    });
+});
+
+// Initial setup
+window.addEventListener('load', function() {
+    loadSong(0);  // Load the first song as default
+});
+
