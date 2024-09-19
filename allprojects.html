@@ -9,16 +9,17 @@
     <title>Shenabeth Jenkins</title>
 
     <!-- load bootstrap & css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- load fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Consolas" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet"> -->
+
     <!-- load scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="index.js" defer></script>
@@ -27,86 +28,47 @@
 
 <body>
     <!-- Top Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-bar">
-        <div class="container">
-            <!-- Logo and Name (Left Side) -->
-            <a class="navbar-brand" href="index.html">
-                <img src="../images/logo_nobkgd.png" alt="Your Logo" height="30">
-                Shenabeth Jenkins
-            </a>
+    <div id="navbar-placeholder"></div>
 
-            <!-- Navigation Links (Right Side) -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="projectsDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Projects
-                        </a>
-                        <div class="dropdown-menu custom-dropdown custom-centered" aria-labelledby="projectsDropdown">
-                            <a class="dropdown-item" href="#">UniPlanner</a>
-                            <a class="dropdown-item" href="#">GroupMe Global Mutuals</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn custom-button" style="color:white" href="Resume_ShenabethJenkins.pdf"
-                            download>Download Resume</a>
-                    </li>
-                </ul>
+    <!-- Full Container -->
+    <div id="container"
+        style="margin: 5vh; position: relative; padding-top: 5vh; padding-bottom: 5vh; opacity: 0; transform: translateY(20px); animation: fadeSlideUp 1.5s ease forwards;">
+        <!-- stars -->
+        <canvas id="starryBackground" style="display: block; position: absolute; top: 0; left: 0;"></canvas>
+        
+        <!-- Title Container -->
+        <div class="container" style="padding-top: 15vh;">
+            <div class="title-container">
+                <h1 style="color: white; font-weight: bold; margin: 0;">
+                    All 
+                    <span style="color: #32af87; text-transform: uppercase;">PROJECTS</span>
+                </h1>
+                <div class="title-line"></div>
             </div>
         </div>
-    </nav>
-
-
-    <!-- Projects -->
-    <div class="container spacer" style="background:#f8f9fa; padding:2em">   
-        <div class="row mt-3"><br><h1 style="color:#33ae87">&emsp;Projects</h1></div>
     </div>
 
-    <div class="container">
-        <p><br>
-            Projects coming soon!
-        </p>
-    </div>
-    
- 
+
+
+
+
+
+
+
+
+
 
     <!-- footer -->
-    <footer class="bg-dark text-light mt-5">
-        <div class="container py-3">
-            <div class="col-md-6 mx-auto">
-                <a href="#"><img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo"></a>
-                <div style="display: inline-block; width: 10px;"></div>
-                <a href="#"><img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo"></a>
-                <div style="display: inline-block; width: 10px;"></div>
-                <a href="#"><img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo"></a>
-                <br>&copy; 2024 Shenabeth Jenkins' Developer Portfolio
-            </div>
-        </div>
-    </footer>
-
+    <div id="footer-placeholder"></div>
 
     <!-- bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
-
-</html>
