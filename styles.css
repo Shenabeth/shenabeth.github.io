@@ -721,7 +721,32 @@ footer p {
   padding: 0.5em;
 }
 
+/* Education Card */
+.education-card {
+  background-color: #2d2d2d;
+  border-radius: 50px;
+  margin-top: 1rem;
+  padding: 0rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Default for larger screens */
+.education-img {
+  border-radius: 50px 0 0 50px;
+}
+
+/* On small screens (mobile), apply 50px border-radius to all corners */
+@media (max-width: 1200px) {
+  .education-img {
+      border-radius: 50px !important;
+  }
+}
 
 
 
@@ -836,6 +861,13 @@ footer p {
     align-items: center;
     justify-content: center;
 } */
+
+
+
+
+
+
+/* button */
 
 
 
