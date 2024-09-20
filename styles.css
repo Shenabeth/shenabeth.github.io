@@ -542,6 +542,7 @@ footer p {
   max-width: 150px;
   margin: 10px; /* Horizontal space between logos */
   text-align: center;
+  pointer-events: none; /* can't copy and paste images */
 }
 
 .skill-logo img {
@@ -747,6 +748,72 @@ p {
       border-radius: 50px !important;
   }
 }
+
+/* Soft Skills Container */
+.soft-skills-container {
+  margin-top: 3vh;
+  text-align: center;
+  background-color: #2d2d2d; /* Background color of the container */
+  border-radius: 50px;        /* Rounded corners */
+  padding: 2rem;              /* Padding inside the container */
+}
+
+/* Skill Item */
+.skill-item {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Skill Box Styling */
+.skill-box {
+  background-color: #32af87;
+  border-radius: 50px;
+  padding: 10px 30px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  height: 100%; /* Take full height of the container in that row */
+}
+
+/* Paragraph Styling for Skill Box */
+.skill-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  text-align: center;
+  word-wrap: break-word; /* Allow word wrap for long text */
+}
+
+/* Ensure all items in the same row have the same height */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .skill-item {
+  display: flex;
+  align-items: stretch; /* Ensure all skill-boxes in a row have the same height */
+}
+
+
+/* Responsive Behavior */
+@media (max-width: 992px) { /* Medium screens */
+  .skill-item {
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) { /* Small screens */
+  .skill-item {
+      max-width: 100%;
+  }
+}
+
 
 
 
