@@ -154,27 +154,27 @@ window.addEventListener('resize', resizeCanvas);
 
 
 // Fade in containers
-// Function to check if 25% of an element is in the viewport
-function is25PercentInViewport(element) {
-    const rect = element.getBoundingClientRect();
+// Function to check if 15% of the next container is in the viewport
+function is15PercentInViewport(container) {
+    const rect = container.getBoundingClientRect();
     const elementHeight = rect.height;
     const visibleHeight = window.innerHeight || document.documentElement.clientHeight;
 
-    // Calculate the amount of the element that is visible
+    // Calculate the amount of the container that is visible
     const elementTopVisible = Math.max(0, visibleHeight - rect.top);
     const elementBottomVisible = Math.max(0, rect.bottom);
 
-    // Check if at least 25% of the element is visible
+    // Check if at least 15% of the element is visible
     const visiblePortion = Math.min(elementTopVisible, elementBottomVisible) / elementHeight;
 
-    return visiblePortion >= 0.25;
+    return visiblePortion >= 0.15;
 }
 
-// Function to add the animation class when the container is 25% in view
+// Function to add the animation class when the container is 15% in view
 function checkFadeIn() {
     const containers = document.querySelectorAll('.fade-container');
     containers.forEach(container => {
-        if (is25PercentInViewport(container)) {
+        if (is15PercentInViewport(container)) {
             container.classList.add('scrolled-into-view');
         }
     });
@@ -183,6 +183,7 @@ function checkFadeIn() {
 // Event listener for scrolling
 window.addEventListener('scroll', checkFadeIn);
 window.addEventListener('load', checkFadeIn);
+
 
 
 
