@@ -299,7 +299,7 @@ pre {
 }
 
 .logo-image {
-  width: 20%;
+  width: 10%;
   height: auto;
   max-width: 100px;
 }
@@ -381,10 +381,13 @@ pre {
 }
 
 .logo-container a img {
-  animation: fadeSlideUp 1.5s ease forwards, tadaWithPause 3s ease 3s infinite;
+  animation: fadeSlideUp 1.5s ease forwards, tadaWithPause 2s ease 2s infinite;
   pointer-events: auto;
   position: relative;
   z-index: 1;
+  width: 60px;
+  height: 60px;
+  max-width: none;
 }
 
 .logo-container a {
