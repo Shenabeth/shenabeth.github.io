@@ -12,7 +12,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .music-item {
+                transition: background 0.2s, box-shadow 0.2s;
+                border-radius: 12px;
+            }
+            .music-item:hover {
+                background: rgba(255,255,255,0.15);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+        </style>
 
     <!-- load fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -87,13 +97,13 @@
                         <!-- Carousel Items -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/art1.png" class="d-block w-100 rounded" alt="Gallery Image 1">
+                                <img src="../images/art/art1.png" class="d-block w-100 rounded" alt="Gallery Image 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art2.png" class="d-block w-100 rounded" alt="Gallery Image 2">
+                                <img src="../images/art/art2.png" class="d-block w-100 rounded" alt="Gallery Image 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art3.png" class="d-block w-100 rounded" alt="Gallery Image 3">
+                                <img src="../images/art/art3.png" class="d-block w-100 rounded" alt="Gallery Image 3">
                             </div>
                         </div>
                         <!-- Thumbnails -->
@@ -114,19 +124,19 @@
                         <!-- Carousel Items -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/art6.png" class="d-block w-100 rounded" alt="Gallery Image 6">
+                                <img src="../images/art/art6.png" class="d-block w-100 rounded" alt="Gallery Image 6">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art7.png" class="d-block w-100 rounded" alt="Gallery Image 7">
+                                <img src="../images/art/art7.png" class="d-block w-100 rounded" alt="Gallery Image 7">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art8.png" class="d-block w-100 rounded" alt="Gallery Image 8">
+                                <img src="../images/art/art8.png" class="d-block w-100 rounded" alt="Gallery Image 8">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art9.png" class="d-block w-100 rounded" alt="Gallery Image 9">
+                                <img src="../images/art/art9.png" class="d-block w-100 rounded" alt="Gallery Image 9">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art10.png" class="d-block w-100 rounded" alt="Gallery Image 10">
+                                <img src="../images/art/art10.png" class="d-block w-100 rounded" alt="Gallery Image 10">
                             </div>
                         </div>
                         <!-- Thumbnails -->
@@ -163,19 +173,19 @@
                         <!-- Carousel Items -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/art4.png" class="d-block w-100 rounded" alt="Gallery Image 4">
+                                <img src="../images/art/art4.png" class="d-block w-100 rounded" alt="Gallery Image 4">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art5.png" class="d-block w-100 rounded" alt="Gallery Image 5">
+                                <img src="../images/art/art5.png" class="d-block w-100 rounded" alt="Gallery Image 5">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art11.png" class="d-block w-100 rounded" alt="Gallery Image 11">
+                                <img src="../images/art/art11.png" class="d-block w-100 rounded" alt="Gallery Image 11">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art12.png" class="d-block w-100 rounded" alt="Gallery Image 12">
+                                <img src="../images/art/art12.png" class="d-block w-100 rounded" alt="Gallery Image 12">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/art13.png" class="d-block w-100 rounded" alt="Gallery Image 13">
+                                <img src="../images/art/art13.png" class="d-block w-100 rounded" alt="Gallery Image 13">
                             </div>
                         </div>
                         <!-- Thumbnails -->
@@ -206,40 +216,39 @@
         </p>
 
 
-        <h5 style="text-align: center;"><span>🚧</span><strong>Music player is under construction!</strong><span>🚧</span></h5>
-
-
         <!-- Music Player -->
         <div class="container">
             <div class="container music-player mt-5" style="padding: 2em">
         
                 <!-- Top Part: Active Song -->
                 <div class="row text-center">
-        
-                    <!-- Music Profile Picture (Square with 50px border) -->
+                    <!-- Music Profile Picture (JS will set src/alt) -->
                     <div class="col-md-12">
-                        <img src="../images/stock1.png" class="img-fluid rounded-square music-thumbnail" alt="Song 1 Thumbnail" style="border-radius: 50px; width: 200px; height: 200px;">
+                        <img class="img-fluid rounded-square music-thumbnail" alt="Song Thumbnail" style="border-radius: 25px; width: 200px; height: 200px;">
                     </div>
-        
-                    <!-- Song Title and Author -->
+                    <!-- Song Title and Author (JS will set text) -->
                     <div class="col-md-12 mt-3">
-                        <p id="activeSongTitle" class="text-white fs-4 mb-0" style="font-size: larger;">Ring Ring</p>
-                        <p id="activeSongArtist" class="text-muted mt-0">Shenabeth</p>
+                        <p id="activeSongTitle" class="text-white fs-4 mb-0" style="font-size: larger;"></p>
+                        <p id="activeSongArtist" class="text-muted mt-0"></p>
                     </div>
-        
-                    <!-- Music Progress Bar (No Default Player) -->
+                    <!-- Music Progress Bar (JS will set values) -->
                     <div class="col-md-12 mt-3">
-                        <span id="currentTime" class="time-label">0:00</span>
+                        <span id="currentTime" class="time-label"></span>
                         <input type="range" id="progressBar" class="music-progress-bar" min="0" max="100" value="0" style="width: 50%; border-radius: 50px;">
-                        <span id="totalTime" class="time-label">2:37</span>
+                        <span id="totalTime" class="time-label"></span>
                     </div>
-        
-                    <!-- Playback Controls with Icons -->
+                    <!-- Playback Controls with Icons (JS will set icons) -->
                     <div class="col-md-12 mt-3">
                         <div class="controls d-flex justify-content-center align-items-center">
-                            <button class="btn btn-secondary mx-2" id="prevBtn"><i class="fas fa-backward"></i></button>
-                            <button class="btn btn-primary mx-2" id="playPauseBtn"><i class="fas fa-play"></i></button>
-                            <button class="btn btn-secondary mx-2" id="nextBtn"><i class="fas fa-forward"></i></button>
+                            <button class="btn btn-secondary mx-2" id="prevBtn">
+                                <img src="../images/music_previous.png" alt="Previous" />
+                            </button>
+                            <button class="btn btn-primary mx-2" id="playPauseBtn">
+                                <img src="../images/music_play.png" alt="Play" />
+                            </button>
+                            <button class="btn btn-secondary mx-2" id="nextBtn">
+                                <img src="../images/music_next.png" alt="Next" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -248,9 +257,9 @@
                 <div class="row bottom-section mt-5">
                     <div class="col-12 song-list" style="max-height: 200px; overflow-y: auto;">
                         <!-- Music Item 1 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song1.mp3" data-thumbnail="stock1.png" data-title="Ring Ring" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song1.mp3" data-title="Ring Ring" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock1.png" class="img-fluid rounded-circle" alt="Song 1 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/ringring.png" class="img-fluid" alt="Ring Ring Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Ring Ring</p>
@@ -259,9 +268,9 @@
                         </div>
         
                         <!-- Music Item 2 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song2.mp3" data-thumbnail="stock2.png" data-title="Space Sandwich" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song2.mp3" data-title="Space Sandwich" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock2.png" class="img-fluid rounded-circle" alt="Song 2 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/spacesandwich.png" class="img-fluid" alt="Space Sandwich Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Space Sandwich</p>
@@ -270,9 +279,9 @@
                         </div>
 
                         <!-- Music Item 3 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song2.mp3" data-thumbnail="stock2.png" data-title="Escape" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song3.mp3" data-title="Escape" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock2.png" class="img-fluid rounded-circle" alt="Song 2 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/escape.png" class="img-fluid" alt="Escape Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Escape</p>
@@ -281,9 +290,9 @@
                         </div>
         
                         <!-- Music Item 4 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song3.mp3" data-thumbnail="stock3.png" data-title="Digital Bird" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song4.mp3" data-title="Digital Bird" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock3.png" class="img-fluid rounded-circle" alt="Song 3 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/digitalbird.png" class="img-fluid" alt="Digital Bird Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Digital Bird</p>
@@ -292,9 +301,9 @@
                         </div>
         
                         <!-- Music Item 5 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song4.mp3" data-thumbnail="stock4.png" data-title="Chiptunes" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song5.mp3" data-title="Chiptunes" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock4.png" class="img-fluid rounded-circle" alt="Song 4 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/chiptunes.png" class="img-fluid" alt="Chiptunes Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Chiptunes</p>
@@ -303,9 +312,9 @@
                         </div>
         
                         <!-- Music Item 6 -->
-                        <div class="d-flex align-items-center mb-3 music-item" data-song="song2.mp3" data-thumbnail="stock2.png" data-title="Tech House" data-artist="Shenabeth">
+                        <div class="d-flex align-items-center mb-3 music-item" data-song="song6.mp3" data-title="Tech House" data-artist="Shenabeth">
                             <div class="music-item-thumbnail">
-                                <img src="../images/stock2.png" class="img-fluid rounded-circle" alt="Song 2 Thumbnail" style="width: 50px; height: 50px;">
+                                <img src="../images/songArt/techhouse.png" class="img-fluid" alt="Tech House Thumbnail" style="width: 50px; height: 50px; border-radius: 25px;">
                             </div>
                             <div class="music-item-info ml-3">
                                 <p class="mb-0 text-white">Tech House</p>

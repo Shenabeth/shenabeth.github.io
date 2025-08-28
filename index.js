@@ -204,12 +204,12 @@ let volumeContainer = document.querySelector('.volume-container');
 let currentSongIndex = 0;
 
 const songs = [
-    { src: "../music/song1.mp3", title: "Ring Ring", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
-    { src: "../music/song2.mp3", title: "Space Sandwich", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
-    { src: "../music/song3.mp3", title: "Escape", artist: "Shenabeth", thumbnail: "../images/stock2.png" },
-    { src: "../music/song4.mp3", title: "Digital Bird", artist: "Shenabeth", thumbnail: "../images/stock3.png" },
-    { src: "../music/song5.mp3", title: "Chiptunes", artist: "Shenabeth", thumbnail: "../images/stock1.png" },
-    { src: "../music/song6.mp3", title: "Tech House", artist: "Shenabeth", thumbnail: "../images/stock4.png" }
+    { src: "../music/song1.mp3", title: "Ring Ring", artist: "Shenabeth", thumbnail: "../images/songArt/ringring.png" },
+    { src: "../music/song2.mp3", title: "Space Sandwich", artist: "Shenabeth", thumbnail: "../images/songArt/spacesandwich.png" },
+    { src: "../music/song3.mp3", title: "Escape", artist: "Shenabeth", thumbnail: "../images/songArt/escape.png" },
+    { src: "../music/song4.mp3", title: "Digital Bird", artist: "Shenabeth", thumbnail: "../images/songArt/digitalbird.png" },
+    { src: "../music/song5.mp3", title: "Chiptunes", artist: "Shenabeth", thumbnail: "../images/songArt/chiptunes.png" },
+    { src: "../music/song6.mp3", title: "Tech House", artist: "Shenabeth", thumbnail: "../images/songArt/techhouse.png" }
 ];
 
 // Function to load a song based on index
@@ -219,18 +219,35 @@ function loadSong(songIndex) {
     document.getElementById('activeSongTitle').textContent = song.title;
     document.getElementById('activeSongArtist').textContent = song.artist;
     document.querySelector('.music-thumbnail').src = song.thumbnail;
-    progressBar.value = 0;
+    // Fix NaN:NaN issue for totalTime
+    document.getElementById('totalTime').textContent = '--:--';
+    audioPlayer.addEventListener('loadedmetadata', function setTotalTimeAndProgress() {
+        document.getElementById('totalTime').textContent = formatTime(audioPlayer.duration);
+        progressBar.value = 0;
+        document.getElementById('currentTime').textContent = '0:00';
+        audioPlayer.removeEventListener('loadedmetadata', setTotalTimeAndProgress);
+    });
 }
 
 // Play/Pause functionality
 playPauseBtn.addEventListener('click', function() {
     if (audioPlayer.paused) {
         audioPlayer.play();
-        playPauseBtn.classList.remove('paused');
     } else {
         audioPlayer.pause();
-        playPauseBtn.classList.add('paused');
     }
+});
+
+// Always update play/pause button icon based on playback state
+audioPlayer.addEventListener('play', function() {
+    const playPauseIcon = playPauseBtn.querySelector('img');
+    playPauseIcon.src = '../images/music_pause.png';
+    playPauseIcon.alt = 'Pause';
+});
+audioPlayer.addEventListener('pause', function() {
+    const playPauseIcon = playPauseBtn.querySelector('img');
+    playPauseIcon.src = '../images/music_play.png';
+    playPauseIcon.alt = 'Play';
 });
 
 // Next/Previous buttons
@@ -247,15 +264,42 @@ document.getElementById('prevBtn').addEventListener('click', function() {
 });
 
 // Progress bar control
+let isDragging = false;
+
+// Update progress bar and time label as audio plays
 audioPlayer.addEventListener('timeupdate', function() {
-    progressBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-    document.getElementById('currentTime').textContent = formatTime(audioPlayer.currentTime);
-    document.getElementById('totalTime').textContent = formatTime(audioPlayer.duration);
+    // Only update progress bar if not dragging and audio is playing
+    if (!isDragging && !audioPlayer.paused) {
+        progressBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        document.getElementById('currentTime').textContent = formatTime(audioPlayer.currentTime);
+        document.getElementById('totalTime').textContent = formatTime(audioPlayer.duration);
+    }
 });
 
-progressBar.addEventListener('input', function() {
-    audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration;
+// Drag-to-seek logic
+progressBar.addEventListener('mousedown', function(e) {
+    isDragging = true;
 });
+
+progressBar.addEventListener('input', function(e) {
+    if (isDragging && !isNaN(audioPlayer.duration) && audioPlayer.duration > 0) {
+        const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+        document.getElementById('currentTime').textContent = formatTime(seekTime);
+    }
+});
+
+document.addEventListener('mouseup', function(e) {
+    if (isDragging && !isNaN(audioPlayer.duration) && audioPlayer.duration > 0) {
+        const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = seekTime;
+        document.getElementById('currentTime').textContent = formatTime(seekTime);
+        progressBar.value = (seekTime / audioPlayer.duration) * 100;
+    }
+    isDragging = false;
+});
+
+// Ensure progress bar thumb is always solid white and centered
+progressBar.style.setProperty('background', '#e0e0e0');
 
 // Format time function
 function formatTime(seconds) {
@@ -269,7 +313,13 @@ document.querySelectorAll('.music-item').forEach(item => {
     item.addEventListener('click', function() {
         currentSongIndex = [...document.querySelectorAll('.music-item')].indexOf(this);
         loadSong(currentSongIndex);
-        audioPlayer.play();
+        audioPlayer.pause();
+        progressBar.value = 0;
+        document.getElementById('currentTime').textContent = '0:00';
+        // Set play/pause button to play
+        const playPauseIcon = playPauseBtn.querySelector('img');
+        playPauseIcon.src = '../images/music_play.png';
+        playPauseIcon.alt = 'Play';
     });
 });
 
