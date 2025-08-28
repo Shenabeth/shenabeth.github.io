@@ -892,6 +892,11 @@ p {
     justify-content: center;
 } */
 
+/* Animated profile gif shadow */
+.right-container img[src*="pfp_animated.gif"] {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.35), 0 1.5px 6px 0 rgba(0,0,0,0.18);
+}
+
 
 /* gallery controls */
 /* .carousel-control-prev,
