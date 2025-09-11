@@ -5,11 +5,66 @@
                 <p class="mb-0" style="font-size: medium;">Copyright 2025 by Shenabeth Jenkins | All Rights Reserved</p>
             </div>
             <div class="col-md-6 text-md-right text-center">
-                <a href="https://www.linkedin.com/in/shenabeth-jenkins/" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo"></a>
-                <a href="https://github.com/Shenabeth" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/githubLogo.png" alt="GitHub Logo"></a>
-                <a href="https://umd.joinhandshake.com/stu/users/50637760" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo"></a>
-                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo"></a>
+                <a href="https://www.linkedin.com/in/shenabeth-jenkins/" target="_blank" rel="noopener noreferrer" class="footer-logo-tooltip-wrapper"><img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo"><span class="footer-tooltip-label">LinkedIn</span></a>
+                <a href="https://github.com/Shenabeth" target="_blank" rel="noopener noreferrer" class="footer-logo-tooltip-wrapper"><img class="footer-image" src="../images/githubLogo.png" alt="GitHub Logo"><span class="footer-tooltip-label">GitHub</span></a>
+                <a href="https://umd.joinhandshake.com/stu/users/50637760" target="_blank" rel="noopener noreferrer" class="footer-logo-tooltip-wrapper"><img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo"><span class="footer-tooltip-label">Handshake</span></a>
+                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" class="footer-logo-tooltip-wrapper"><img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo"><span class="footer-tooltip-label">shenabeth@gmail.com</span></a>
             </div>
         </div>
     </div>
 </footer>
+<style>
+    .footer-image {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        vertical-align: middle;
+        transition: transform 0.2s;
+    }
+    .footer-image:hover {
+        transform: scale(1.1);
+    }
+    @media (max-width: 576px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-image {
+            width: 40px;
+            height: 40px;
+            margin: 0 8px 10px 8px;
+            display: inline-block;
+        }
+        .text-md-right.text-center {
+            text-align: center !important;
+            margin-top: 10px;
+        }
+    }
+    .footer-logo-tooltip-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .footer-tooltip-label {
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: 120%;
+        transform: translateX(-50%);
+        background: #232323;
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 16px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px #0003;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+    }
+    .footer-logo-tooltip-wrapper:hover .footer-tooltip-label,
+    .footer-logo-tooltip-wrapper:focus .footer-tooltip-label {
+        display: block;
+        opacity: 1;
+    }
+</style>

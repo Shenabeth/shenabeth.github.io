@@ -287,9 +287,26 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
   padding: 10px;
+}
+@media (max-width: 768px) {
+  .logos-container {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+  }
+  .logos-container a {
+    width: auto !important;
+    margin: 0 5px !important;
+  }
 }
 
 .logo-container a {

@@ -13,7 +13,14 @@
 				<input type="email" class="form-control" id="email" name="email" required style="border-radius: 25px; background: #232323; color: #fff; border: 1px solid #444;">
 			</div>
 		</div>
-		<!-- Hidden subject input for dynamic subject line -->
+
+		<!-- Subject input for user to customize email subject -->
+		<div class="form-group">
+			<label for="subject" style="color: #e0e0e0; font-size: 1rem; font-weight: 500; text-align: left; display: block;">Subject</label>
+			<input type="text" class="form-control" id="subject" name="subject" required style="border-radius: 25px; background: #232323; color: #fff; border: 1px solid #444;">
+		</div>
+
+		<!-- Hidden subject input for dynamic subject line (fallback for bots/scripts)-->
 		<input name="subject" type="hidden" value="New submission from {{ name }}" />
 		<div class="form-group">
 			<label for="message" style="color: #e0e0e0; font-size: 1rem; font-weight: 500; text-align: left; display: block;">Message</label>

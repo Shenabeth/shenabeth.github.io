@@ -1,12 +1,70 @@
 <!-- Centered Logo Container -->
 <div class="container logo-container" style="text-align: center; margin-top: 2rem;">
-    <div class="row justify-content-center">
-            <a href="https://www.linkedin.com/in/shenabeth-jenkins/" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo"></a>
+    <div class="row justify-content-center logo-row-horizontal" style="flex-wrap: nowrap; overflow-x: auto; gap: 10px;">
+</div>
+<style>
+@media (max-width: 768px) {
+    .logo-row-horizontal {
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+    .logo-row-horizontal a {
+        width: auto !important;
+        margin: 0 5px !important;
+    }
+    .logo-row-horizontal > div[style*="width: 20px"] {
+        width: 10px !important;
+        min-width: 10px !important;
+        display: inline-block !important;
+    }
+}
+</style>
+            <a href="https://www.linkedin.com/in/shenabeth-jenkins/" target="_blank" rel="noopener noreferrer" class="logo-tooltip-wrapper"><img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo"><span class="logo-tooltip-label">LinkedIn</span></a>
             <div style="display: inline-block; width: 20px;"></div>
-            <a href="https://github.com/Shenabeth" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/githubLogo.png" alt="GitHub Logo"></a>
+            <a href="https://github.com/Shenabeth" target="_blank" rel="noopener noreferrer" class="logo-tooltip-wrapper"><img class="footer-image" src="../images/githubLogo.png" alt="GitHub Logo"><span class="logo-tooltip-label">GitHub</span></a>
             <div style="display: inline-block; width: 20px;"></div>
-            <a href="https://umd.joinhandshake.com/stu/users/50637760" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo"></a>
+            <a href="https://umd.joinhandshake.com/stu/users/50637760" target="_blank" rel="noopener noreferrer" class="logo-tooltip-wrapper"><img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo"><span class="logo-tooltip-label">Handshake</span></a>
             <div style="display: inline-block; width: 20px;"></div>
-            <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer"><img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo"></a>
+            <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" class="gmail-logo-tooltip-wrapper">
+                <img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo">
+                <span class="gmail-tooltip-label">shenabeth@gmail.com</span>
+            </a>
+</div>
+<style>
+.logo-tooltip-wrapper, .gmail-logo-tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.logo-tooltip-label, .gmail-tooltip-label {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    background: #232323;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px #0003;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.logo-tooltip-wrapper:hover .logo-tooltip-label,
+.logo-tooltip-wrapper:focus .logo-tooltip-label,
+.gmail-logo-tooltip-wrapper:hover .gmail-tooltip-label,
+.gmail-logo-tooltip-wrapper:focus .gmail-tooltip-label {
+    display: block;
+    opacity: 1;
+}
+</style>
     </div>
 </div>
