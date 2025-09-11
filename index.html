@@ -39,32 +39,35 @@
         <!-- Intro -->
         <div class="container transparent-bg home-container-section">
             <div class="container-fluid">
-                <div class="row">
-
+                <div class="row intro-flex-row">
                     <!-- First container -->
-                    <div class="col-md-7 left-container" style="margin-top: 5vh;">
-                        <p style="color:#33ae87">FULL STACK PROGRAMMER</p>
-                        <h4 style="color:white">Hello, my name is</h4>
-                        <h1>Shenabeth Jenkins</h1>
-                        <p><br>
-                            I’m a software engineer specializing in web development, user experience, and scalable
-                            architecture. I build responsive websites, mobile apps, and full-stack software solutions.
-                            Check out my portfolio to see how I can contribute to your next project!
-                        </p>
-
-                        <!-- Buttons -->
-                        <div class="button-container">
-                            <a href="contact.html" class="btn primary-button">Let's Collaborate!</a>
-                            <a href="../Resume_ShenabethJenkins.pdf" class="btn secondary-button" download>Download
-                                Resume</a>
-
+                    <div class="col-md-7 left-container intro-left" style="margin-top: 5vh;">
+                        <div class="intro-content-wrapper">
+                            <p class="intro-role">FULL STACK PROGRAMMER</p>
+                            <h4 class="intro-greeting">Hello, my name is</h4>
+                            <h1 class="intro-name">Shenabeth Jenkins</h1>
+                            <!-- Animated pfp for mobile, hidden on desktop -->
+                            <div class="intro-mobile-pfp d-block d-md-none">
+                                <img src="../images/pfp_animated.gif" loading="lazy"
+                                    alt="Shenabeth Jenkins – Full Stack Programmer and Software Engineer"
+                                    style="width: 60vw; max-width: 220px; height: auto; border-radius: 50%; object-fit: cover; aspect-ratio: 1 / 1;">
+                            </div>
+                            <p class="intro-desc"><br>
+                                I’m a software engineer specializing in web development, user experience, and scalable
+                                architecture. I build responsive websites, mobile apps, and full-stack software solutions.
+                                Check out my portfolio to see how I can contribute to your next project!
+                            </p>
+                            <!-- Buttons -->
+                            <div class="button-container intro-btns">
+                                <a href="contact.html" class="btn primary-button">Let's Collaborate!</a>
+                                <a href="../Resume_ShenabethJenkins.pdf" class="btn secondary-button" download>Download Resume</a>
+                            </div>
                             <!-- Logos Container -->
-                            <div id="logos-section" class="logos-container" style="margin: 5vh;"></div>
+                            <div id="logos-section" class="logos-container intro-logos"></div>
                         </div>
                     </div>
-
-                    <!-- Second container -->
-                    <div class="col-md-5 right-container">
+                    <!-- Second container: animated pfp for desktop only -->
+                    <div class="col-md-5 right-container intro-desktop-pfp d-none d-md-flex" style="justify-content: center; align-items: center;">
                         <img src="../images/pfp_animated.gif" loading="lazy"
                             alt="Shenabeth Jenkins – Full Stack Programmer and Software Engineer"
                             style="width: 80%; height: auto; max-width: 100%; border-radius: 50%; object-fit: cover; aspect-ratio: 1 / 1;">
@@ -74,6 +77,63 @@
 
             <!-- Logos -->
             <div id="logos-placeholder"></div>
+</style>
+<style>
+@media (max-width: 768px) {
+    .intro-flex-row {
+        flex-direction: column-reverse !important;
+        display: flex !important;
+    }
+    .intro-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 0 0 0 !important;
+        display: block;
+        text-align: center !important;
+    }
+    .intro-content-wrapper {
+        text-align: center !important;
+        width: 100%;
+    }
+    .intro-role, .intro-greeting, .intro-name, .intro-desc {
+        text-align: center !important;
+    }
+    .intro-mobile-pfp {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 2vh 0 2vh 0 !important;
+    }
+    .intro-desktop-pfp {
+        display: none !important;
+    }
+    .intro-btns {
+        justify-content: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 1rem;
+    }
+    .intro-logos {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 5vh 0 0 0 !important;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    #logos-section.logos-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 0 0 0 !important;
+        width: 100%;
+        gap: 0.5rem;
+    }
+}
+</style>
 
         </div>
     </div>
@@ -340,6 +400,35 @@
                         Let’s <b>connect</b> — whether you’re hiring, collaborating, or just want to chat design and
                         development ideas!
                     </p>
+
+                    <!-- Logos -->
+                    <div class="text-md-left text-center" style="margin-top: 5vh;">
+                        <span class="logo-tooltip-wrapper">
+                            <a href="https://www.linkedin.com/in/shenabeth-jenkins/" target="_blank" rel="noopener noreferrer">
+                                <img class="footer-image" src="../images/linkedinLogo.png" alt="LinkedIn Logo">
+                                <span class="logo-tooltip-label">LinkedIn</span>
+                            </a>
+                        </span>
+                        <span class="logo-tooltip-wrapper">
+                            <a href="https://github.com/Shenabeth" target="_blank" rel="noopener noreferrer">
+                                <img class="footer-image" src="../images/githubLogo.png" alt="GitHub Logo">
+                                <span class="logo-tooltip-label">GitHub</span>
+                            </a>
+                        </span>
+                        <span class="logo-tooltip-wrapper">
+                            <a href="https://umd.joinhandshake.com/stu/users/50637760" target="_blank" rel="noopener noreferrer">
+                                <img class="footer-image" src="../images/handshakeLogo.png" alt="Handshake Logo">
+                                <span class="logo-tooltip-label">Handshake</span>
+                            </a>
+                        </span>
+                        <span class="logo-tooltip-wrapper">
+                            <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
+                                <img class="footer-image" src="../images/gmailLogo.png" alt="Gmail Logo">
+                                <span class="logo-tooltip-label">Gmail</span>
+                            </a>
+                        </span>
+                    </div>
+
                 </div>
                 <!-- Form Section (Right, 60% on md+, 100% on sm) -->
                 <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
