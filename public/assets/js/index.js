@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 educationPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 technicalSkillsPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 
@@ -90,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 softSkillsPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 
@@ -100,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 certificationsPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 
@@ -110,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 csCoursesPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 
@@ -120,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 astronomyCoursesPlaceholder.innerHTML = data;
+                checkFadeIn();
             });
     }
 })();
