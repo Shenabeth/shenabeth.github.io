@@ -39,115 +39,89 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navbar
 (function () {
-    // Collect all component loading promises
-    const promises = [];
-
     // Load Navbar
     const navbarPlaceholder = document.getElementById("navbar-placeholder");
-    promises.push(
-        fetch("components/navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                navbarPlaceholder.innerHTML = data;
-            })
-    );
+    fetch("components/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            navbarPlaceholder.innerHTML = data;
+        });
 
     // Load Footer
     const footerPlaceholder = document.getElementById("footer-placeholder");
-    promises.push(
-        fetch("components/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                footerPlaceholder.innerHTML = data;
-            })
-    );
+    fetch("components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            footerPlaceholder.innerHTML = data;
+        });
 
     // Load Logos
     const logosPlaceholder = document.getElementById("logos-placeholder");
-    promises.push(
-        fetch("components/logos.html")
-            .then(response => response.text())
-            .then(data => {
-                logosPlaceholder.innerHTML = data;
-            })
-    );
+    fetch("components/logos.html")
+        .then(response => response.text())
+        .then(data => {
+            logosPlaceholder.innerHTML = data;
+        });
 
     // Load Education Cards (skills page only)
     const educationPlaceholder = document.getElementById("education-cards-placeholder");
     if (educationPlaceholder) {
-        promises.push(
-            fetch("components/education-cards.html")
-                .then(response => response.text())
-                .then(data => {
-                    educationPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/education-cards.html")
+            .then(response => response.text())
+            .then(data => {
+                educationPlaceholder.innerHTML = data;
+            });
     }
 
     // Load Technical Skills (skills page only)
     const technicalSkillsPlaceholder = document.getElementById("technical-skills-placeholder");
     if (technicalSkillsPlaceholder) {
-        promises.push(
-            fetch("components/technical-skills.html")
-                .then(response => response.text())
-                .then(data => {
-                    technicalSkillsPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/technical-skills.html")
+            .then(response => response.text())
+            .then(data => {
+                technicalSkillsPlaceholder.innerHTML = data;
+            });
     }
 
     // Load Soft Skills (skills page only)
     const softSkillsPlaceholder = document.getElementById("soft-skills-placeholder");
     if (softSkillsPlaceholder) {
-        promises.push(
-            fetch("components/soft-skills.html")
-                .then(response => response.text())
-                .then(data => {
-                    softSkillsPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/soft-skills.html")
+            .then(response => response.text())
+            .then(data => {
+                softSkillsPlaceholder.innerHTML = data;
+            });
     }
 
     // Load Certifications (skills page only)
     const certificationsPlaceholder = document.getElementById("certifications-placeholder");
     if (certificationsPlaceholder) {
-        promises.push(
-            fetch("components/certifications.html")
-                .then(response => response.text())
-                .then(data => {
-                    certificationsPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/certifications.html")
+            .then(response => response.text())
+            .then(data => {
+                certificationsPlaceholder.innerHTML = data;
+            });
     }
 
     // Load Computer Science Courses (skills page only)
     const csCoursesPlaceholder = document.getElementById("cs-courses-placeholder");
     if (csCoursesPlaceholder) {
-        promises.push(
-            fetch("components/cs-courses.html")
-                .then(response => response.text())
-                .then(data => {
-                    csCoursesPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/cs-courses.html")
+            .then(response => response.text())
+            .then(data => {
+                csCoursesPlaceholder.innerHTML = data;
+            });
     }
 
     // Load Astronomy Courses (skills page only)
     const astronomyCoursesPlaceholder = document.getElementById("astronomy-courses-placeholder");
     if (astronomyCoursesPlaceholder) {
-        promises.push(
-            fetch("components/astronomy-courses.html")
-                .then(response => response.text())
-                .then(data => {
-                    astronomyCoursesPlaceholder.innerHTML = data;
-                })
-        );
+        fetch("components/astronomy-courses.html")
+            .then(response => response.text())
+            .then(data => {
+                astronomyCoursesPlaceholder.innerHTML = data;
+            });
     }
-
-    // Call checkFadeIn after all components have loaded
-    Promise.all(promises).then(() => {
-        checkFadeIn();
-    });
 })();
 
 
