@@ -5,9 +5,7 @@ Welcome to my personal website repository!
 🔗 **Live Website:**  
 👉 https://shenabeth.github.io
 
-<br>
----
-<br>
+
 
 
 ## 🌟 About Me
@@ -23,7 +21,6 @@ It serves as a central hub for:
 This website was built and deployed using GitHub Pages.
 
 
----
 
 
 ## 🚀 Projects
@@ -34,7 +31,6 @@ Explore my full project portfolio here:
 (Projects include web development, structured documentation, and technical builds.)
 
 
----
 
 
 ## 📄 Resume
@@ -43,7 +39,6 @@ You can view my resume here:
 👉 [Download Resume](Shenabeth_Jenkins_Resume.pdf)
 
 
----
 
 
 ## 🎨 Design Documentation
@@ -52,7 +47,6 @@ Original Figma planning documentation:
 👉 [View Figma Plan](FigmaDocumentation.pdf)
 
 
----
 
 
 ## 🛠 Tech Stack For This Site
@@ -64,7 +58,6 @@ Original Figma planning documentation:
 - gtag.js
 
 
----
 
 
 ## 📬 Connect With Me
