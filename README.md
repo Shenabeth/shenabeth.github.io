@@ -5,7 +5,9 @@ Welcome to my personal website repository!
 🔗 **Live Website:**  
 👉 https://shenabeth.github.io
 
-<br>---<br>
+<br>
+---
+<br>
 
 
 ## 🌟 About Me
